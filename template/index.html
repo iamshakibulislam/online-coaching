@@ -1,0 +1,429 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WebHeavenIT | next generation online programming coaching </title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/vendor/swiper.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/slide.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	
+</head>
+<body>
+	<section class="head-area">
+	<nav class="navbar navbar-expand-lg navbar-light nav-bg bg-transparent mb-0">
+		<div class="container">
+  		<a class="navbar-brand" href="#"><img src="{% static 'img/logo/logo.png' %}" style="height:4rem;"></a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNav">
+	    	<ul class="navbar-nav mx-auto">
+	      		<li class="nav-item">
+	        		<a class="nav-link m-2" href="#courses"> Courses <span class="sr-only">(current)</span></a>
+	     		 </li>
+	      		<li class="nav-item">
+					<a class="nav-link m-2" href="#how-it-works"> How it works </a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link m-2" href="#testimonials"> Testimonials </a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link m-2" href="#about-us">About Us</a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link m-2" href="{% url 'contact_page' %}">Contact Us</a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link m-2" href="{% url 'login_page' %}">Login</a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link my-2 ml-4 btn btn-orange text-white"  href="{% url 'registration_page' %}">Start learning</a>
+	      		</li>
+	    	</ul>
+  		</div>
+  		</div>
+	</nav>
+	<!-- hero section starts here -->
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+		
+			
+
+			<div class="col-md-6 ml-auto">
+				<div class="hero-text">
+				<h1 class="font-weight-bold text-white text-center" style="opacity: 1">
+				Master Django with One on One Live !</h1>
+				<p class="lead text-white course-intro mt-4 text-justify paragraph" style="opacity: 1">
+					Become grand master webdeveloper with world famous opensource web framework DJANGO. Instagram,  Mozilla, Pinterest, Nasa and many others world populer websites are built with Django ! Millions of Django jobs are being posted every single year. So, This is the time to master it and land your dream JOB .</p>
+				</div>
+				<a href="#" class="btn btn-lg mt-2 btn-action" style="margin-left: 9rem;">Get Started Now</a>
+			</div>
+
+			<div class="com-md-3 mr-auto">
+				<img src="{% static 'img/woman-pointing-finger.png' %}">
+				
+			</div>
+			
+			
+		
+	</div>
+	</div>
+		
+</section>	
+	
+	
+
+	
+	<!-- hero section ends here -->
+	<!-- course section starts here -->
+	<section id="courses">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-7 mx-auto course-head">
+				<h1 class="text-center mb-4">Learn web development with <span style="color:green;">Django</span></h1>
+				<p class=" text-center paragraph">A Django developer typically earns 70,000$ to 1,55,000$ per year in USA . Over 5,00000 Django freelance jobs are being posted every year on top freelancing sites . Learn django now and become a tiny part of this giant opportunity ocean in this industry.</p>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="col-md-6">
+				<img src="{% static 'img/django.png' %}" style="height: 12rem;width: 20rem;" class="section-img mt-4" />
+			</div>
+			<div class="col-md-6">
+				<h4 class="mt-4">One on One live class !</h4>
+				<p class="mt-3 mr-4 paragraph">Learn from experts engineers who have experience in this industry  more than 5 years. We strongly believe in interactive one on one education because it helps students and teachers to stay on focused and be produtive. Traditional digital courses are great but those are one sided. Students are not able to directly communicate to the instructor which leads them to confusions. On webheavenit you will be learning with one teacher at a session. </p>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- course section ends here -->
+	<section id="first-call-to-action">
+		<div class="row justify-content-center">
+			<div class="col-md-7">
+				<div class="messages mt-4 pt-3">
+				<h2 class="text-center mb-4">Want to learn django ? start your journey now</h2>
+				<div class="action-btn d-flex justify-content-center">
+				<a class="btn btn-md btn-lg btn-orange btn-center text-white" href="#">
+				Start learning django now</a>
+			    </div>
+				
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="how-it-works" class="small-section" style="margin-top:0px">
+		<div class="row justify-content-center">
+			<h2 class="new-section">This is how it works</h2>
+		</div>
+		<div class="row new-section justify-content-center align-items-center small-section">
+			<div class="col-md-4">
+			<img src="{% static 'img/signup.png' %}" style="height: 12rem;width: 20rem">
+		    </div>
+
+		    <div class="col-md-4">
+		    	<p class="lead"> Signup an account and login with your credentials . You will be redirected to your dashboard .</p>
+		    </div>
+		</div>
+		<div class="row item-spacing justify-content-center align-items-center small-section">
+			<div class="col-md-4 order-md-2">
+			<img src="{% static 'img/schedule.png' %}" style="height: 12rem;width: 20rem">
+		    </div>
+
+		    <div class="col-md-4">
+		    	<p class="lead"> Click on 'Start learning' button and schedule your time according to your availability. You will  receive a joining link in your email  </p>
+		    </div>
+		</div>
+		<div class="row item-spacing justify-content-center align-items-center small-section">
+			<div class="col-md-4 order-md-0">
+			<img src="{% static 'img/teaching.png' %}" style="height: 12rem;width: 20rem">
+		    </div>
+
+		    <div class="col-md-4">
+		    	<p class="lead"> Join the class with the following link and start learning live from our expert django developers .</p>
+		    </div>
+		</div>
+		
+	</section>
+
+	<!-- testimonial section starts here -->
+
+<div class="row new-section justify-content-center">
+	<div class="col-md-10">
+<section class="spacer">
+      
+        <div class="testimonial-section">
+          <div class="testi-user-img d-none d-md-block">
+          <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img class="u3" src="https://md-aqil.github.io/images/2091127763_1_1_1.jpg" alt="">
+                  </div>
+              <div class="swiper-slide">
+                <img class="u1" src="https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+              <img class="u2" src="https://md-aqil.github.io/images/attractive-beautiful-beauty-1986684.jpg" alt="">
+              </div>
+            
+              <div class="swiper-slide">
+              <img class="u4" src="https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg" alt="">
+              </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="user-saying">
+              <div class="swiper-container testimonial slide-height">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper ">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <div class="quote">
+                          <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+                        <p class="text-center testimonial-text">
+                            “Testing slide is best and biggest unified platform
+                        for instant online admission. We can easily
+                        take admission for any course in any institute..“
+                        </p>
+                        <div class="name">-Ramkishor Verma-</div>
+                        <div class="designation">University Student</div>
+                        
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="quote">
+                        <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+                      
+                        <p class="testimonial-text">
+                            “This is best and biggest unified platform
+                        for instant online admission. We can easily
+                        take admission for any course in any institute..“
+                        </p>
+                        <div class="name">-Ramkishor Verma-</div>
+                        <div class="designation">University Student</div>
+                        
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="quote">
+                        <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+                          
+                        <p class="testimonial-text">
+                            “This is best and biggest unified platform
+                        for instant online admission. We can easily
+                        take admission for any course in any institute..“
+                        </p>
+                        <div class="name">-Ramkishor Verma-</div>
+                        <div class="designation">University Student</div>
+                        
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="quote">
+                          <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+                         
+                          <p class="testimonial-text">
+                              “This is best and biggest unified platform
+                          for instant online admission. We can easily
+                          take admission for any course in any institute..“
+                          </p>
+                          <div class="name">-Ramkishor Verma-</div>
+                          <div class="designation">University Student</div>
+                          
+                        </div>
+                      </div>
+                    
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination swiper-pagination-white"></div>
+                
+                </div>
+          </div>
+        </div>
+      </section>
+  </div>
+  </div>
+
+
+  <div class="row justify-content-center" id="testimonials">
+  	<div class="col-md-10">
+  		<h2 class="new-section text-center">What our students say</h2>
+  	</div>
+
+  </div>
+
+<!-- video testimonials are there -->
+  <div class="row new-section">
+  	
+  
+ 
+ <div class="col-sm-2 offset-md-1">
+  
+   <!-- Button trigger modal -->
+<a type="button" class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/A-twOC3W558" data-target="#myModal">
+  <img src="{% static 'img/testimonials/demo-pic.jpg' %}" style="height:auto;width:100%">
+</a>
+</div>
+ 
+ <div class="col-sm-2">
+  
+   <!-- Button trigger modal -->
+<a type="button" class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/A-twOC3W558" data-target="#myModal">
+  <img src="{% static 'img/testimonials/demo-pic.jpg' %}" style="height:auto;width:100%">
+</a>
+</div>
+ 
+ <div class="col-sm-2">
+  
+   <!-- Button trigger modal -->
+<a type="button" class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/A-twOC3W558" data-target="#myModal">
+  <img src="{% static 'img/testimonials/demo-pic.jpg' %}" style="height:auto;width:100%">
+</a>
+</div>
+  
+ <div class="col-sm-2">
+  
+   <!-- Button trigger modal -->
+<a type="button" class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/A-twOC3W558" data-target="#myModal">
+  <img src="{% static 'img/testimonials/demo-pic.jpg' %}" style="height:auto;width:100%">
+</a>
+</div>
+
+ <div class="col-sm-2">
+  
+   <!-- Button trigger modal -->
+<a type="button" class="video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0" data-target="#myModal">
+  <img src="{% static 'img/testimonials/demo-pic.jpg' %}" style="height:auto;width:100%">
+</a>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      
+      <div class="modal-body">
+
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>        
+        <!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+</div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div> 
+  
+  </div>
+
+
+  
+
+ 
+ 
+
+	<!-- testimonial section ends here -->
+
+
+	<!-- about us section starts here -->
+
+	<section id="about-us" class="new-section">
+		<div class="row justify-content-center">
+			<div class="col-md-7">
+				<h2 class="text-center">Who we are </h2>
+			</div>
+		</div>
+		<div class="row new-section justify-content-around">
+			<div class="col-md-5">
+				<img src="{% static 'img/team.jpg' %}" class="about-img" />
+		    </div>
+		    <div class="col-md-5">
+		    	<p class="lead">We are a team of professional developers from around the world who are extremely passionate about mentoring students and helping them to reach their full potential in this 500 BILLION software development industry. We have over a decade of experience in software development and over 6 years of experience of training students around the globe.Webheavenit has taken the software development training industry to the next level by eliminating traditional teaching methodology and implementing modern systematic learning  approach</p>
+		    </div>
+		</div>
+	</section>
+
+
+
+
+	<!-- about us section ends here -->
+
+
+	  <!-- Site footer -->
+    <footer class="site-footer new-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">WebheavenIT is an online software development training company helping thousands of students around the world to master the art and skill of software development . We provide interactive one on one live training which helps students to grasp the information better than traditional group class .</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+          	<!--
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul> -->
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#about-us">About Us</a></li>
+              <li><a href="{% url 'contact_page' %}">Contact Us</a></li>
+              <li><a href="{% url 'registration_page' %}">Signup</a></li>
+              <li><a href="{% url 'login_page' %}">Login</a></li>
+              <li><a href="">Privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+         webheavenit.com
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://facebook.com/webheavenit"><i class="fa fa-facebook"></i></a></li>
+               
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
+	<!-- script area -->
+	<script type="text/javascript" src="{% static 'js/vendor/jquery-3.5.1.min.js' %}"></script>
+	<script src="https://kit.fontawesome.com/a3fe98cd79.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/vendor/swiper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/vendor/slide.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+	<!-- end of script area -->
+</body>
+</html>

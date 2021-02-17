@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>login | WebHeavenIT </title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/vendor/swiper.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/slide.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	
+</head>
+
+
+<body>
+	<div class="form-bg">
+		
+		<div class="row justify-content-center login-row align-items-center">
+
+			<div class="col-md-3">
+				<img src="{% static 'img/logo/logo.png' %}" class="mb-3"><br>
+				<form>
+					<input type="email" name="email" class="form-control" placeholder="email@example.com"><br>
+					<input type="password" name="password" class="form-control mb-3" placeholder="password">
+					<a href="forget-password" class="text-white" style="text-decoration:none">Forgot your password ?</a><br>
+					<button class="btn btn-orange text-white mt-3" style="width: 100%">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
