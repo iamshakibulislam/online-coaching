@@ -1,54 +1,7 @@
+{% extends 'simple-base.html' %}
+{% block content %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact us | Wenheavenit </title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{% static 'css/vendor/swiper.min.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/slide.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/bootstrap.min.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-	
-</head>
-<body>
-	<section class="head-area">
-	<nav class="navbar navbar-expand-lg navbar-light nav-bg bg-transparent mb-0">
-		<div class="container">
-  		<a class="navbar-brand" href="#"><img src="{% static 'img/logo/logo.png' %}" style="height:4rem;"></a>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="collapse navbar-collapse" id="navbarNav">
-	    	<ul class="navbar-nav mx-auto">
-	      		<li class="nav-item">
-	        		<a class="nav-link m-2" href="{% url 'index' %}#courses"> Courses <span class="sr-only">(current)</span></a>
-	     		 </li>
-	      		<li class="nav-item">
-					<a class="nav-link m-2" href="{% url 'index' %}#how-it-works"> How it works </a>
-	      		</li>
-	      		<li class="nav-item">
-	        		<a class="nav-link m-2" href="{% url 'index' %}#testimonials"> Testimonials </a>
-	      		</li>
-	      		<li class="nav-item">
-	        		<a class="nav-link m-2" href="{% url 'index' %}#about-us">About Us</a>
-	      		</li>
-	      		<li class="nav-item">
-	        		<a class="nav-link m-2" href="{% url 'contact_page' %}">Contact Us</a>
-	      		</li>
-	      		<li class="nav-item">
-	        		<a class="nav-link m-2" href="{% url 'login_page' %}">Login</a>
-	      		</li>
-	      		<li class="nav-item">
-	        		<a class="nav-link my-2 ml-4 btn btn-orange text-white"  href="{% url 'registration_page' %}">Start learning</a>
-	      		</li>
-	    	</ul>
-  		</div>
-  		</div>
-	</nav>
+{% block title %}Contact us | webheavenit {% endblock title %}
 
 	<div class="contact-form new-section">
 		<div class="row justify-content-center">
@@ -63,5 +16,5 @@
 		</div>
 	</div>
 
-</section>
-</body>
+	{% endblock content %}
+

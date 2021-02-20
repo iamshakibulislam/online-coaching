@@ -1,0 +1,29 @@
+{% extends 'simple-base.html' %}
+{% load static %}
+{% block title %}
+reset password | webheavenit
+{% endblock title %}
+{% block content %}
+
+<div class="row justify-content-center align-items-center row-height" >
+
+	<div class="col-md-6">
+		<h2 class="text-white font-weight-bold text-center form-heading">Password reset successful !</h2>
+		<div class="col-md-8 mx-auto">
+		<a href="{% url 'login_page' %}" class="btn btn-orange btn-lg mt-4 text-center text-white full-width-button mx-auto" >Login to your account</a>
+	</div>
+
+ 
+</div>
+</div>
+
+<script type="text/javascript" src="{% static 'js/vendor/jquery-3.5.1.min.js' %}"></script>
+	<script src="https://kit.fontawesome.com/a3fe98cd79.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/vendor/swiper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/vendor/slide.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/forms.js' %}"></script>
+
+
+{% endblock content %}

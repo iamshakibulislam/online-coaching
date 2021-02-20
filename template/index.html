@@ -19,7 +19,7 @@
 	<section class="head-area">
 	<nav class="navbar navbar-expand-lg navbar-light nav-bg bg-transparent mb-0">
 		<div class="container">
-  		<a class="navbar-brand" href="#"><img src="{% static 'img/logo/logo.png' %}" style="height:4rem;"></a>
+  		<a class="navbar-brand" href="{% url  'registration_page' %}"><img src="{% static 'img/logo/logo.png' %}" style="height:4rem;"></a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
@@ -63,7 +63,7 @@
 				<p class="lead text-white course-intro mt-4 text-justify paragraph" style="opacity: 1">
 					Become grand master webdeveloper with world famous opensource web framework DJANGO. Instagram,  Mozilla, Pinterest, Nasa and many others world populer websites are built with Django ! Millions of Django jobs are being posted every single year. So, This is the time to master it and land your dream JOB .</p>
 				</div>
-				<a href="#" class="btn btn-lg mt-2 btn-action" style="margin-left: 9rem;">Get Started Now</a>
+				<a href="{% url 'registration_page' %}" class="btn btn-lg mt-2 btn-action" style="margin-left: 9rem;">Get Started Now</a>
 			</div>
 
 			<div class="com-md-3 mr-auto">
@@ -109,7 +109,7 @@
 				<div class="messages mt-4 pt-3">
 				<h2 class="text-center mb-4">Want to learn django ? start your journey now</h2>
 				<div class="action-btn d-flex justify-content-center">
-				<a class="btn btn-md btn-lg btn-orange btn-center text-white" href="#">
+				<a class="btn btn-md btn-lg btn-orange btn-center text-white" href="{% url 'registration_page' %}">
 				Start learning django now</a>
 			    </div>
 				
