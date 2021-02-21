@@ -6,6 +6,8 @@ from accounts.models import User
 from django.contrib import auth
 
 
+
+
 def login_page(request):
 	if request.method == 'GET':
 		return render(request,'login.html')
@@ -18,7 +20,7 @@ def login_page(request):
 		if authenticate is not None :
 			auth.login(request,authenticate)
 
-			return redirect('index')
+			return redirect('dashboard')
 
 		else:
 			return render(request,'login.html',{'message':'username or password is incorrect !'})
