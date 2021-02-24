@@ -1,6 +1,384 @@
+
 {% extends 'dashboard/base.html' %}
 
 {% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/accordions.css' %}">
 
+<div class="row">
+    <div class="col-md-12">
+        <div class="overview-wrap">
+            <h2 class="title-1">Course curriculum</h2>
+            <a href="{% url 'schedule' %}">
+                <button class="au-btn au-btn-icon au-btn--blue">
+                    <i class="zmdi zmdi-plus"></i> Start learning </button>
+                </a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-11">
+        <div class="au-card recent-report">
+            <div class="au-card-inner">
+  
+<div class="container">
+    <div class="row">
+        <div class="col-md-11">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapseTwo">
+                                Advance python3 overview
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">basic  data structure(list,dict,tuple,set)</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">conditional operators and statements</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">iterating through iterable objects</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">lambda,filter and map function</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">object oreiented programming</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">basic inheritance </h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- curriculum two -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
+                                Basic django introduction and project flow
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">What is django</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">What is mvc model</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">django project flow</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">basic django-commands (manage.py)</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">hello world with django</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">django App concept in depth </h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum two -->
+
+
+                <!-- curriculum three -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapseTwo">
+                                Django url routing
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">What is url routing</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">folder structure of .py files</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">url dispatching</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">url  pattern setting</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">request flow from url to view to template</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">shortcut functions in django </h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum three -->
+
+                <!-- end of curriculum two -->
+
+
+                <!-- curriculum four -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapseTwo">
+                                Django  views
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">what is views</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">creating django views</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">view functions</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">function based views code flow</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">class based views</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">use of mixins </h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum four -->
+
+
+                <!-- curriculum five -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapseTwo">
+                                Django templating
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">What is template in django</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">Template tags</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">Template extending or inheritance</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">reletive urls</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">conditional template tags</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">dealing with static files and paths in template </h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum five -->
+
+
+                <!-- curriculum six -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapseTwo">
+                                Django model and ORM part 1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">what is model in django</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">database integration</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">creating basic model</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">making migrations</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">making basic queries</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">understanding querysets </h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum six -->
+
+                 <!-- curriculum seven -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapseTwo">
+                                Django model and ORM part 2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">understanding releted keywords</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">complex searching with Q objects</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">aggregation and annotation</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">searching in database</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">performing raw sql queries</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">model and database relationships in details </h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum seven -->
+
+
+                 <!-- curriculum eight -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapseTwo">
+                                Django Forms
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">what is django form</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">why it is used</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">types of forms</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">model form</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">form integrating with template</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">capturing data and validating  form </h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">saving data to database </h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum eight -->
+
+                 <!-- curriculum nine -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapseTwo">
+                                Django authentication
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">what is authentication</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">what is default user model</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">login and signup with default User model</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">custom User model</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">login and signup with custom user model</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">restricting unauthentic user access </h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">password reseting and changing</h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum nine -->
+
+                 <!-- curriculum ten -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapseTwo">
+                                Django caching and testing
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">what is cache in django</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">what is unit testig</h6><br>
+                            <i class="fas fa-hand-point-right text-danger mr-3"></i>
+                            <h6 class="d-inline">how to write testcase</h6><br>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum ten -->
+
+
+                 <!-- curriculum final -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefinal" aria-expanded="false" aria-controls="collapseTwo">
+                                Q & A about any topic
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsefinal" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <p> In this class you can ask anything releted to django and career in software development</p>
+
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- end of curriculum final -->
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+                              
+             </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
