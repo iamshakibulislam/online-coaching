@@ -5,6 +5,7 @@ from .models import  trainer_availability
 
 @receiver(post_save, sender=User)
 def add_trainer_time(sender, instance, **kwargs):
+	
 
 	if instance.is_trainer == True:
 

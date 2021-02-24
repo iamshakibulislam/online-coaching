@@ -27,10 +27,13 @@
                                         <hr>
                         <form action="" method="post" novalidate="novalidate" id="payment-form">
                         <div class="form-group">
-                            <label for="cc-payment" class="control-label mb-1">Time availability</label>
+                            <label for="cc-payment" class="control-label mb-1">Current time availability</label>
                             <select id="cc-payment" class="form-control">
-                            	<option name="7pm" value="7pm">7 pm (EST)</option>
-                            	<option name="10pm" value="10pm">10 pm (EST)</option>
+                            	{% for x in available_time %}
+                            	<option name="time" value="{{x}}"> {{x}}   Eastern Standard Time (EST) </option>
+
+                            	{% endfor %}
+                            	
                             </select>
                          </div>
                                             <div class="form-group has-success">
