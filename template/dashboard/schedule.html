@@ -19,20 +19,32 @@
 	<div class="row mt-4 justify-content-center">
 		<div class="col-lg-6">
             <div class="card">
-                <div class="card-header"></div>
+                <div class="card-header">
+                	{% for message in messages %}
+                	<div class="alert alert-info">{{message}}</div>
+                	{% endfor %}
+                </div>
                     <div class="card-body">
                         <div class="card-title">
                             <h3 class="text-center title-2">One time payment</h3>
                         </div>
                                         <hr>
                         <form action="" method="post" novalidate="novalidate" id="payment-form">
+
+                        	{% csrf_token %}
+                        	<input type="hidden" name="token" value="none" id="tokeninput">
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Current time availability</label>
-                            <select id="cc-payment" class="form-control">
+                            <select id="cc-payment" name="time" class="form-control">
+                            	{% if totaltimecount == 0 %}
+                            	<option name="time" value="no">No available time for now. Try again later</option>
+                            	{% else %}
                             	{% for x in available_time %}
                             	<option name="time" value="{{x}}"> {{x}}   Eastern Standard Time (EST) </option>
 
                             	{% endfor %}
+
+                            	{% endif %}
                             	
                             </select>
                          </div>
@@ -100,7 +112,16 @@ window.addEventListener('load', function() {
     // Call the generate method using the component as the first parameter
     // and the billing details as the second one
     jsPaymentClient.tokens.generate(component, billingDetails).then((response) => {
-      console.log(response.token);
+     // console.log(response.token);
+      $.when( $('#tokeninput').val(response.token)).then(function(){
+
+      //if (('#tokeninput').val() != 'none' ){
+      $('#payment-form').submit();// }
+      //else{alert('something wemt wrong try again !')}
+
+      })
+
+      
     }).catch((error) => {
       console.error(error);
     });

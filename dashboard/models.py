@@ -1,6 +1,6 @@
 from django.db import models
 from accounts.models import User
-
+from datetime import datetime, timedelta
 class curriculums(models.Model):
 	topic = models.CharField(max_length=80)
 
@@ -32,10 +32,11 @@ class student_info(models.Model):
 	is_paid = models.BooleanField(default=False)
 	amount = models.FloatField(default=0,null=False)
 	time = models.TimeField(auto_now_add=False,auto_now=False)
+	expire_date = models.DateField(auto_now_add=False,auto_now=False,null=True)
 
 	class Meta:
 		verbose_name='student information'
-		verbose_name_plural='studends information'
+		verbose_name_plural='students information'
 
 
 	def __str__(self):
