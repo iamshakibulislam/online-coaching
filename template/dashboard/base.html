@@ -11,7 +11,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>{% block title %} {% endblock title %}</title>
 
     <!-- Fontfaces CSS-->
     <link href="{% static 'dashboard/css/font-face.css' %}" rel="stylesheet" media="all">
@@ -21,7 +21,9 @@
 
 
     <!-- Bootstrap CSS-->
-    <link href="{% static 'dashboard/vendor/bootstrap-4.1/bootstrap.min.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <!-- <link href="{% static 'dashboard/vendor/bootstrap-4.1/bootstrap.min.css' %}" rel="stylesheet" media="all"> -->
+
 
     <!-- Vendor CSS-->
     <link href="{% static 'dashboard/vendor/animsition/animsition.min.css' %}" rel="stylesheet" media="all">
@@ -65,7 +67,7 @@
                         </li>
                         <li>
                             <a href="{% url 'schedule' %}">
-                                <i class="fas fa-chart-bar"></i>schedule</a>
+                                <i class="far fa-clock"></i>schedule</a>
                         </li>
                         <li>
                             <a href="table.html">
@@ -116,13 +118,13 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class=" has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="{% url 'dashboard' %}">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             
                         </li>
                         <li>
                             <a href="{% url 'schedule' %}">
-                                <i class="fas fa-chart-bar"></i>Schedule</a>
+                                <i class="far fa-clock"></i>Schedule</a>
                         </li>
                         <li>
                             <a href="table.html">
@@ -216,6 +218,7 @@
                             <div class="col-md-12">
                                 <div class="copyright">
                                     <p>Copyright © 2021 Wenheavenit. All rights reserved. </p>
+                                    
                                 </div>
                             </div>
                         </div>
