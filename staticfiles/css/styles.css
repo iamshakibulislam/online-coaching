@@ -1,4 +1,105 @@
 html{margin:0px !important;}
+
+
+/** meadia queries **/
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {  
+  h1{
+    font-size: 2rem;
+
+  }
+  h2{
+    font-size: 1.3rem !important;
+  }
+  p{
+    font-size: 1rem !important;
+  }
+
+  .hero-text{
+    margin-top:2.4rem !important;
+  }
+
+  .section-img{
+    margin-left: 2rem !important;
+    margin-right: auto !important;
+  }
+
+  .para{
+    margin-top:3rem !important;
+    margin-left: 1rem !important;
+  }
+
+
+.reg-logo{
+  margin-left: 3rem !important;
+  margin-top:5rem !important;
+}
+}
+
+
+
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {  
+
+    h1{
+    font-size: 2rem;
+
+  }
+  h2{
+    font-size: 1.3rem !important;
+  }
+  p{
+    font-size: 1rem !important;
+  }
+
+  .hero-text{
+    margin-top:3rem !important;
+    margin-left: 4rem !important;
+  }
+
+  .section-img{
+    margin-left: 3rem !important;
+    margin-right: auto !important;
+  }
+
+  .para{
+    margin-top:3rem !important;
+    margin-left: 1rem !important;
+  }
+
+  h4{
+    text-align: center;
+  }
+
+
+.reg-logo{
+  margin-left: 5rem !important;
+  margin-top:9rem !important;
+}
+
+}
+
+
+@media (max-width: 992px) { 
+  .section-img{
+    margin-left: 3rem !important;
+    margin-right: auto !important;
+  }
+
+  .para{
+    margin-left: 4rem !important;
+  }
+
+
+.reg-logo{
+  margin-left: 5rem !important;
+  margin-top:9rem !important;
+}
+}
+
+
+
 body{
 	margin:0 !important;
 	padding:0 !important;
@@ -82,8 +183,8 @@ nav ul li a:hover{
 
 .section-img{
 	border-radius: 2rem;
-	margin-left: 14rem !important;
-	margin-right: 3rem !important;
+	margin-left: 14rem ;
+	margin-right: 3rem;
 }
 
 .btn-center{

@@ -20,8 +20,8 @@
 	<nav class="navbar navbar-expand-lg navbar-light nav-bg bg-transparent mb-0">
 		<div class="container">
   		<a class="navbar-brand" href="{% url  'index' %}"><img src="{% static 'img/logo/logo.png' %}" style="height:4rem;"></a>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
+  		<button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon" style="font-color:white" ></span>
   		</button>
   		<div class="collapse navbar-collapse" id="navbarNav">
 	    	<ul class="navbar-nav mx-auto">
@@ -56,7 +56,7 @@
 		
 			
 
-			<div class="col-md-6 ml-auto">
+			<div class="col-md-9 col-lg-6 mx-sm-auto col-sm-12 ml-lg-auto">
 				<div class="hero-text">
 				<h1 class="font-weight-bold text-white text-center" style="opacity: 1">
 				Master Django with One on One Live !</h1>
@@ -66,7 +66,7 @@
 				<a href="{% url 'registration_page' %}" class="btn btn-lg mt-2 btn-action" style="margin-left: 9rem;">Get Started Now</a>
 			</div>
 
-			<div class="com-md-3 mr-auto">
+			<div class="com-md-3 mr-auto d-none d-lg-block">
 				<img src="{% static 'img/woman-pointing-finger.png' %}">
 				
 			</div>
@@ -86,13 +86,13 @@
 	<section id="courses">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-7 mx-auto course-head">
+			<div class="col-md-9  mx-auto course-head">
 				<h1 class="text-center mb-4">Learn web development with <span style="color:green;">Django</span></h1>
-				<p class=" text-center paragraph">A Django developer typically earns 70,000$ to 1,55,000$ per year in USA . Over 5,00000 Django freelance jobs are being posted every year on top freelancing sites . Learn django now and become a tiny part of this giant opportunity ocean in this industry.</p>
+				<p class=" text-lg-center paragraph">A Django developer typically earns 70,000$ to 1,55,000$ per year in USA . Over 5,00000 Django freelance jobs are being posted every year on top freelancing sites . Learn django now and become a tiny part of this giant opportunity ocean in this industry.</p>
 			</div>
 		</div>
 		<div class="row mt-4">
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-12 ">
 				<img src="{% static 'img/django.png' %}" style="height: 12rem;width: 20rem;" class="section-img mt-4" />
 			</div>
 			<div class="col-md-6">
@@ -128,7 +128,7 @@
 		    </div>
 
 		    <div class="col-md-4">
-		    	<p class="lead"> Signup an account and login with your credentials . You will be redirected to your dashboard .</p>
+		    	<p class="lead para"> Signup an account and login with your credentials . You will be redirected to your dashboard .</p>
 		    </div>
 		</div>
 		<div class="row item-spacing justify-content-center align-items-center small-section">
@@ -137,7 +137,7 @@
 		    </div>
 
 		    <div class="col-md-4">
-		    	<p class="lead"> Click on 'Start learning' button and schedule your time according to your availability. You will  receive a joining link in your email  </p>
+		    	<p class="lead para"> Click on 'Start learning' button and schedule your time according to your availability. You will  receive a joining link in your email  </p>
 		    </div>
 		</div>
 		<div class="row item-spacing justify-content-center align-items-center small-section">
@@ -146,7 +146,7 @@
 		    </div>
 
 		    <div class="col-md-4">
-		    	<p class="lead"> Join the class with the following link and start learning live from our expert django developers .</p>
+		    	<p class="lead para"> Join the class with the following link and start learning live from our expert django developers .</p>
 		    </div>
 		</div>
 		
@@ -154,7 +154,7 @@
 
 	<!-- testimonial section starts here -->
 
-<div class="row new-section justify-content-center">
+<div class="row new-section justify-content-center d-none d-md-block">
 	<div class="col-md-10">
 <section class="spacer">
       
@@ -352,7 +352,7 @@
 				<img src="{% static 'img/team.jpg' %}" class="about-img" />
 		    </div>
 		    <div class="col-md-5">
-		    	<p class="lead">We are a team of professional developers from around the world who are extremely passionate about mentoring students and helping them to reach their full potential in this 500 BILLION software development industry. We have over a decade of experience in software development and over 6 years of experience of training students around the globe.Webheavenit has taken the software development training industry to the next level by eliminating traditional teaching methodology and implementing modern systematic learning  approach</p>
+		    	<p class="lead para">We are a team of professional developers from around the world who are extremely passionate about mentoring students and helping them to reach their full potential in this 500 BILLION software development industry. We have over a decade of experience in software development and over 6 years of experience of training students around the globe.Webheavenit has taken the software development training industry to the next level by eliminating traditional teaching methodology and implementing modern systematic learning  approach</p>
 		    </div>
 		</div>
 	</section>
@@ -368,7 +368,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
+            <h6>About us</h6>
             <p class="text-justify">WebheavenIT is an online software development training company helping thousands of students around the world to master the art and skill of software development . We provide interactive one on one live training which helps students to grasp the information better than traditional group class .</p>
           </div>
 
