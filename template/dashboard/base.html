@@ -69,37 +69,13 @@
                             <a href="{% url 'schedule' %}">
                                 <i class="far fa-clock"></i>schedule</a>
                         </li>
+                        {% if request.user.is_trainer %}
                         <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
+                            <a href="{% url 'meeting_link' %}">
+                                <i class="fas fa-video"></i> Meeting link </a>
                         </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
+                        {% endif %}
+                       
                        
                     </ul>
                 </div>
@@ -126,22 +102,13 @@
                             <a href="{% url 'schedule' %}">
                                 <i class="far fa-clock"></i>Schedule</a>
                         </li>
+                        {% if request.user.is_trainer %}
                         <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
+                            <a href="{% url 'meeting_link' %}">
+                            <i class="fas fa-video"></i> Meeting link</a>
                         </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
+                        {% endif %}
+                        
                         
                     </ul>
                 </nav>
@@ -162,34 +129,35 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="{% static 'dashboard/images/icon/avatar-01.jpg' %}" alt="John Doe" />
+                                            
+                                            <i class="fas fa-user" style="font-size:3rem"></i>
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#">{{ request.user.first_name}}  {{ request.user.last_name}} </a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="{% static 'dashboard/images/icon/avatar-01.jpg' %}" alt="John Doe" />
+                                                         <i class="fas fa-user" style="font-size:3rem"></i>
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#">{{ request.user.first_name}}  {{ request.user.last_name}}</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">{{request.user.email}}</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                    <a href="{% url 'change_password' %}">
+                                                        <i class="zmdi zmdi-account"></i> Change password</a>
                                                 </div>
                                                 
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
+                                                <a href="{% url 'logout' %}">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>

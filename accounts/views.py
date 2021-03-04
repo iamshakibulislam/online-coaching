@@ -57,3 +57,7 @@ def registration_page(request):
 					return render(request,'registration.html',
 						{'success':'account created successfully.You can <a href="#">login </a> now'})
 
+
+def logout(request):
+	auth.logout(request)
+	return redirect('index')

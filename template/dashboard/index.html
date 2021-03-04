@@ -5,14 +5,135 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/accordions.css' %}">
 
+
+<!-- teacher content show -->
+{% if request.user.is_trainer %}
+
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <h2 class="title-1 m-b-25">Your students</h2>
+                                <div class="table-responsive table--no-card m-b-40">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th> upcoming class </th>
+                                                <th> Time </th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% if len == 0 %}
+                                            <div class="alert alert-success">
+                                                <h3 class="text-center"> You have no student for now </h3>
+                                            </div>
+                                            {% else %}
+                                            {% for x in contx %}
+                                            <tr>
+                                                <td>{{x.name}}</td>
+                                                <td> {{x.date}} </td>
+                                                <td> {{x.time}} BDT</td>
+                                                
+                                            </tr>
+                                            {% endfor %}
+
+                                            {% endif %}
+                                            
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+{% endif %}
+<!-- teacher content show ends here -->
+
+{% if not request.user.is_trainer  %}
+<!--- card section -->
+
+{% if not len == 0 %}
+
+<div class="row mt-4">
+    <div class="col-sm-6 col-lg-4">
+        <div class="overview-item overview-item--c2">
+            <div class="overview__inner">
+                <div class="overview-box clearfix">
+                        <div class=" text-white font-weight-bold text-center">
+                            My trainer
+                        </div>
+                        <div class="text mt-4">
+                            <h4>{{contx.teacher}}</h4><br><br>
+                                
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+     <div class="col-sm-6 col-lg-4">
+        <div class="overview-item overview-item--c2">
+            <div class="overview__inner">
+                <div class="overview-box clearfix">
+                        <div class=" text-white font-weight-bold text-center">
+                            Starting time
+                        </div>
+                        <div class="text mt-4">
+                            <h4>{{contx.date}}</h4><br>
+                            <h4> {{contx.time}} </h4>
+                                
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+     <div class="col-sm-6 col-lg-4">
+        <div class="overview-item overview-item--c2">
+            <div class="overview__inner">
+                <div class="overview-box clearfix" style="overflow:hidden">
+                        <div class=" text-white font-weight-bold text-center">
+                            zoom link
+                        </div>
+                        <div class="text mt-4">
+                            <textarea>{{contx.lnk}}</textarea><br><br>
+                            
+                                
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+</div>
+{% endif %}
+
+<!-- end of card section -->
+{% endif %}
+
 <div class="row">
     <div class="col-md-12">
         <div class="overview-wrap">
             <h2 class="title-1">Course curriculum</h2>
+            {% if request.user.is_trainer  %}
+            {% else %}
+            {% if not len > 0 %}
             <a href="{% url 'schedule' %}">
                 <button class="au-btn au-btn-icon au-btn--blue">
                     <i class="zmdi zmdi-plus"></i> Start learning </button>
-                </a>
+                </a> 
+                {% endif %}
+                {% endif %}
         </div>
     </div>
 </div>

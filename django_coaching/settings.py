@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
     'accounts',
     'dashboard',
 ]
@@ -140,3 +141,8 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'admin@webheavenit.com'
 EMAIL_HOST_PASSWORD = 'pNn02Zj1RAhr'
+
+
+CRONJOBS = [
+    ('59 23 * * *', 'dashboard.crons.class_schedule')
+]

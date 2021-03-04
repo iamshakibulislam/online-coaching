@@ -33,6 +33,7 @@ class student_info(models.Model):
 	amount = models.FloatField(default=0,null=False)
 	time = models.TimeField(auto_now_add=False,auto_now=False)
 	expire_date = models.DateField(auto_now_add=False,auto_now=False,null=True)
+	next_date =  models.DateField(auto_now_add=False,auto_now=False,null=True)
 
 	class Meta:
 		verbose_name='student information'
@@ -45,4 +46,6 @@ class student_info(models.Model):
 
 
 
-
+class trainer_link(models.Model):
+	trainer= models.OneToOneField(User,on_delete=models.CASCADE)
+	link=models.CharField(max_length=50)

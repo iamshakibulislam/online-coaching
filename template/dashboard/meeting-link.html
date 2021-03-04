@@ -1,0 +1,31 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %} setup zoom link {% endblock title %}
+
+{% block content %}
+
+
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7 mt-4">
+                                <div class="au-card recent-report">
+                                	{% for message in messages %}
+                                	<div class="alert alert-success">{{message}}</div>
+                                	{% endfor %}
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2"> Paste your reusable zoom meeting link </h3>
+                                     		<form action="" method="post" class="form-inline mt-4">
+                                     			{% csrf_token %}
+                                     			<input type="text" name="url" class="form-control" placeholder="{% if lnk == '' %}https://zoom.url/{% else %} {{lnk.link}} {% endif %}" required="true">
+                                     			<input type="submit" name="submit" class="btn btn-success ml-1" value="Save">
+                                     		</form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+
+{% endblock content %}
