@@ -17,6 +17,7 @@ html{margin:0px !important;}
 
   .hero-text{
     margin-top:2.4rem !important;
+    margin-left: 0rem !important;
   }
 
   .section-img{
@@ -55,7 +56,7 @@ html{margin:0px !important;}
 
   .hero-text{
     margin-top:3rem !important;
-    margin-left: 4rem !important;
+    margin-left: 1rem !important;
   }
 
   .section-img{
