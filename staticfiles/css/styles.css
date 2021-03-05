@@ -112,7 +112,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 	background-color:rgb(255 252 252) !important;
 	height: 100% !important;
-	width: 100% !important;
+	max-width: 1440px !important;
 	overflow-x: hidden;
 }
 
