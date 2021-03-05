@@ -8,7 +8,13 @@
 	<div class="contact-form new-section">
 		<div class="row justify-content-center">
 			<div class="col-md-6">
-				<form>
+				{% if messages %}
+				{% for message in messages %}
+				<div class="alert alert-success mt-1 mb-1">{{message}}</div>
+				{% endfor %}
+				{% endif %}
+				<form method="post" action="">
+					{% csrf_token %}
 					<input type="email" name="email" placeholder="youremail@example.com" class="form-control" required="true"><br>
 					<input type="text" name="subject" placeholder="What is your question ?" class="form-control" required="true"><br>
 					<textarea rows="12" class="form-control" name="message" required="true">Can you describe it more ?</textarea><br>

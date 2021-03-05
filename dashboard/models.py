@@ -49,3 +49,16 @@ class student_info(models.Model):
 class trainer_link(models.Model):
 	trainer= models.OneToOneField(User,on_delete=models.CASCADE)
 	link=models.CharField(max_length=50)
+
+
+class contact_messages(models.Model):
+	email = models.EmailField(max_length=23)
+	subject = models.CharField(max_length=38)
+	message = models.TextField(max_length=900)
+
+	class Meta:
+		verbose_name='contact message'
+		verbose_name_plural='contact messages'
+
+	def __str__(self):
+		return str(self.email +' > ' + self.subject)
