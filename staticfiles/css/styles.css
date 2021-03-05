@@ -101,6 +101,21 @@ html{margin:0px !important;}
   margin-left: 5rem !important;
   margin-top:9rem !important;
 }
+
+
+
+}
+
+
+@media (min-width: 1600px){
+  .hero-text{
+    margin-top:9rem !important;
+    
+  }
+
+  .head-area{
+    height: 65vh !important;
+  }
 }
 
 
@@ -113,6 +128,8 @@ body{
 	background-color:rgb(255 252 252) !important;
 	height: 100% !important;
 	max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 	overflow-x: hidden;
 }
 
