@@ -145,7 +145,13 @@ def schedule(request):
 
 
 						trainer_table = trainer_availability.objects.get(id=int(trainer_table_id))
+
+
+
 						nextdate=datetime.now()+timedelta(days=4)
+						if trainer_table.students_number == 1:
+							seldate=student_info.objects.get(teacher=trainer_table,time=time_allocated).next_date
+							nextdate = seldate+timedelta(days=1)
 						if nextdate.strftime("%w") == "4" and time_allocated.strftime("%-I.%M %p") in ["8.00 PM","9.00 PM","10.00 PM"]:
 							nextdate = nextdate + timedelta(days=2)
 						if nextdate.strftime("%w") == "5" and time_allocated.strftime("%-I.%M %p") in ["8.00 AM","9.00 AM"]:
