@@ -22,7 +22,7 @@ class trainer_availability(models.Model):
 
 
 
-	def __str__(self):
+	def __str__(self) :
 		return str(self.trainer.first_name+'  '+self.trainer.last_name +'  '+'email:'+'  '+self.trainer.email)
 
 
@@ -48,7 +48,7 @@ class student_info(models.Model):
 
 class trainer_link(models.Model):
 	trainer= models.OneToOneField(User,on_delete=models.CASCADE)
-	link=models.CharField(max_length=50)
+	link=models.CharField(max_length=500)
 
 
 class contact_messages(models.Model):
