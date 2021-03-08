@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
+from django.views.generic import TemplateView
 from . import views
 admin.site.site_header = 'WebheavenIT Administration'
 
@@ -25,7 +26,9 @@ urlpatterns = [
     path('',views.index,name='index'),
     path('accounts/',include('accounts.urls')),
     path('user/',include('dashboard.urls')),
-    path('contact-us/',views.contact_page,name='contact_page')
+    path('contact-us/',views.contact_page,name='contact_page'),
+    path('privacy-policy/',TemplateView.as_view(template_name='privacy.html'),name='privacy_page')
+
 
 ]
 
