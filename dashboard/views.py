@@ -12,6 +12,10 @@ from datetime import datetime, timedelta
 from accounts.models import User
 from django.contrib.auth.hashers import make_password
 from django.contrib import auth
+import hmac
+import hashlib
+import base64
+import requests
 
 @login_required(login_url='/accounts/login/')
 def dashboard(request):
@@ -61,6 +65,11 @@ def schedule(request):
 	if request.method == 'GET':
 		time=trainer_availability.objects.all()
 		times=[]
+		try:
+			cookie = request.COOKIES['time']
+			
+		except :
+			cookie = 0
 
 
 		for available_time in time:
@@ -70,19 +79,26 @@ def schedule(request):
 		
 		return render(request,'dashboard/schedule.html',{'available_time':times,'totaltimecount':len(times)})
 
+def student_confirm(request):
+	if request.method == 'GET' :
 
-	if request.method == 'POST' :
+		refno = request.GET['refno']
 		
-		selected_time = request.POST['time']
-		token = request.POST['token']
-		ch_name = request.POST['cc-name']
-		
+		try:
+			selected_time = request.COOKIES['time']
+
+		except :
+
+			return HttpResponse('<h1>Time was not selected</h1>')
+		#token = request.POST['token']
+		#ch_name = request.POST['cc-name']
+		'''
 		if token == 'none':
 			messages.info(request,'card information is not valid')
 			return redirect('schedule')
-
+		'''
 		if selected_time == "no" :
-			messages.info(request,'No time available for now . Try again tomorrow')
+			messages.info(request,'No time available for now . Contact support ')
 			return redirect('schedule')
 
 		else :
@@ -100,7 +116,7 @@ def schedule(request):
 			if found==True:
 
 				#2checkout api action starts here 
-
+				'''
 				twocheckout.Api.auth_credentials({
 				'private_key': '7A0667BA-7B96-465D-BBFC-B9CC527ADF79',
 				'seller_id': '250757877049',
@@ -136,12 +152,31 @@ def schedule(request):
 
 					
 				}
+				'''
 
 				try:
+					vendor_code = "250797972054"
+					key = "hd]Vg!3BC4tymw8x@)+S"
+					curr_date=str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+					algo = str(str(len(vendor_code))+str(vendor_code)+str(len(curr_date))+curr_date)
 
-					result = twocheckout.Charge.authorize(params)
+					crypto = hmac.new(b'hd]Vg!3BC4tymw8x@)+S', algo.encode('utf-8'),digestmod=hashlib.md5).hexdigest()
+					req_header = {
+					"accept":"application/json",
+					"X-Avangate-Authentication":"code='{}'' date='{}'' hash='{}' ".format(vendor_code,curr_date,crypto),
+					"OrderReference":str(refno)
+					}
+
+
+
+					result = requests.get('https://api.2checkout.com/rest/6.0/orders/'+str(refno),headers=req_header)
+
+					confirmed_ref_no=int(json.loads(result.content)['RefNo'])
 					
-					if result.responseCode == 'APPROVED':
+
+					
+					
+					if confirmed_ref_no == int(refno):
 
 
 						trainer_table = trainer_availability.objects.get(id=int(trainer_table_id))
@@ -182,10 +217,10 @@ def schedule(request):
 						return redirect('schedule')
 
 
-
-				except TwocheckoutError as error :
-					messages.info(request,'Payment error | Try again later')
+				except :
+					messages.info(request,'FAILED! contact support')
 					return redirect('schedule')
+				
 
 				# this code will go inside try block above
 				
@@ -207,7 +242,7 @@ def schedule(request):
 
 			else:
 
-				messages.info(request,'This schedule is not available. Try again please')
+				messages.info(request,'This schedule is not available. Contact support')
 
 				return redirect('schedule')
 
