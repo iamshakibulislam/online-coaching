@@ -86,7 +86,7 @@ html{margin:0px !important;}
 }
 
 
-@media (max-width: 992px) { 
+@media (max-width: 1200px) { 
   .section-img{
     margin-left: 3rem !important;
     margin-right: auto !important;
