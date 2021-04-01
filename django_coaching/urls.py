@@ -29,7 +29,8 @@ urlpatterns = [
     path('contact-us/',views.contact_page,name='contact_page'),
     path('privacy-policy/',TemplateView.as_view(template_name='privacy.html'),name='privacy_page'),
     path('refund-policy/',TemplateView.as_view(template_name='refund-policy.html'),name='refund_policy'),
-    path('delivery-policy/',TemplateView.as_view(template_name='delivery-policy.html'),name='delivery_policy')
+    path('delivery-policy/',TemplateView.as_view(template_name='delivery-policy.html'),name='delivery_policy'),
+    path('weight-loss/',TemplateView.as_view(template_name='landpage.html'))
 
 
 ]
