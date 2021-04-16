@@ -82,7 +82,7 @@ def schedule(request):
 def student_confirm(request):
 	if request.method == 'GET' :
 
-		refno = request.GET['refno']
+		#refno = request.GET['refno']
 		
 		try:
 			selected_time = request.COOKIES['time']
@@ -155,6 +155,9 @@ def student_confirm(request):
 				'''
 
 				try:
+
+					sommething='lol'
+					'''
 					vendor_code = "250797972054"
 					key = "hd]Vg!3BC4tymw8x@)+S"
 					curr_date=str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
@@ -172,11 +175,11 @@ def student_confirm(request):
 					result = requests.get('https://api.2checkout.com/rest/6.0/orders/'+str(refno),headers=req_header)
 
 					confirmed_ref_no=int(json.loads(result.content)['RefNo'])
-					
+					'''
 
 					
 					
-					if confirmed_ref_no == int(refno):
+					if 1==1:
 
 
 						trainer_table = trainer_availability.objects.get(id=int(trainer_table_id))
